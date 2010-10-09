@@ -32,3 +32,5 @@ In honor of its behavor, we'll call this cas-cad-e.  Thus,
 
 You should make sure your output is linear in the size of the input,
 in particular avoiding a quadratic blow-up.
+
+See tests.rkt for some test cases, and cascade.rkt for my solution.
