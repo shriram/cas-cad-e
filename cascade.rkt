@@ -8,7 +8,7 @@
    (syntax-case exprs ()
      [() #'()]
      [((e ...)) (syntax-case thunk-names ()
-            [(t) #'((t (lambda () e ...)))])]
+                  [(t) #'((t (lambda () e ...)))])]
      [((e0 ...) er ...)  ;; must be two or more, so t0 t1 pattern below is justified
       (syntax-case thunk-names ()
         [(t0 t1 tr ...)
