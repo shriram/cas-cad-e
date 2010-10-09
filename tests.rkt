@@ -36,4 +36,13 @@
 (check-expect (cas2 6) 6) "5/6"
 (check-expect (cas2 7) (void))
 
+(define (cas3 v)
+  (let ([w true])
+    (cas-cad-e v
+               [(0) (set! w false)]
+               [(1) (if w (break 1) (break 0))])))
+
+(check-expect (cas3 0) 0)
+(check-expect (cas3 1) 1)
+
 (test)
